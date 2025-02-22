@@ -1,0 +1,180 @@
+/*  ==========================
+    CSS RESET by Andy Bell
+    ==========================  */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+/*  ==========================
+    My CSS Styling
+    ==========================  */
+
+/*  Global Styles & Variables   */
+:root {
+    --clr-title-blue: #13366b;
+    --clr-background-blue: #cbe2fe;
+    --clr-border-grey: #7b7b7b;
+    --clr-background-grey: #e7e7e7;
+    --clr-subtitle-blue: #1577ff;
+    --clr-text-blue: #1d457b;
+}
+
+h1, h2 {
+    color: var(--clr-title-blue);
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+p, li, a {
+    color: var(--clr-text-blue);
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+/*  Page Structure & Section Styles */
+
+body {
+    max-width: 38rem;
+    min-width: 21rem;
+    /* 
+    It won't go fullscreen on a mobile screen without using @media. 
+    - Can you please provide feedback on this? thanks!!  
+    - I tried removing the resets
+    - I tried using width: min(100%, 38rem);
+    - I tried using px instead of rem
+    */ 
+    margin: 0 auto;
+    padding: 1rem 0rem;
+}
+
+
+.brand-name {
+    text-align: center;
+    background-color: var(--clr-background-blue);
+    padding: 2rem 0rem 3rem 0rem;
+    border-bottom: 0.5rem solid var(--clr-border-grey);
+    margin-bottom: 1rem;
+}
+
+.story, .services,
+.locations{
+    background-color: var(--clr-background-grey);
+    margin-bottom: 2rem;
+    padding: 1.5rem .75rem 0.75rem;
+}
+
+.section-title{
+    text-align: center;
+    border-bottom: 0.15rem solid var(--clr-border-grey);
+    margin: 1rem 0rem;
+}
+
+.story__description {
+    margin: 1rem 0rem
+}
+
+.services p {
+    font-style: italic;
+}
+
+.services__subtitle,
+.locations__subtitle {
+    color: var(--clr-subtitle-blue);
+    text-decoration: solid underline var(--clr-subtitle-blue) 0.1rem ;
+}
+
+.services__description, 
+.locations__description {
+    margin: 1rem 0rem;
+}
+
+footer {
+    background-color: var(--clr-background-blue);
+    padding: 0.5rem 1rem 1rem;
+    text-align: center;
+
+}
+
+.footer__image {
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+.footer__legal,
+.footer__social {
+    font-style: italic;
+    margin: 1rem 0rem;
+}
+
+
